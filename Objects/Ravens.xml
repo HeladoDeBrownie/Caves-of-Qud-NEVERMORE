@@ -2,13 +2,14 @@
     <!-- Ravens -->
 
     <object Name="HDBrownie_NVM_Base Raven" Inherits="BaseBird">
-        <part Name="Render" Tile="HDBrownie NVM Raven.png" ColorString="&amp;K" DetailColor="K" />
+        <part Name="Render" Tile="HDBrownie NVM Raven.png" ColorString="&amp;K" DetailColor="w" />
         <part Name="Corpse" CorpseChance="100" CorpseBlueprint="HDBrownie_NVM_Raven Corpse" />
         <tag Name="BaseObject" Value="*noinherit" />
         <tag Name="ExcludeFromDynamicEncounters" />
     </object>
 
     <object Name="HDBrownie_NVM_Raven NPC" Inherits="HDBrownie_NVM_Base Raven">
+        <part Name="Render" Tile="HDBrownie NVM Raven NPC.png" />
         <part Name="Corpse" CorpseChance="100" CorpseBlueprint="HDBrownie_NVM_Unique Raven Corpse" />
         <xtagGrammar Proper="true" />
         <tag Name="Gender" Value="nonspecific" />
@@ -17,19 +18,19 @@
 
     <object Name="HDBrownie_NVM_Melancholy Raven" Inherits="HDBrownie_NVM_Raven NPC">
         <part Name="Render" DisplayName="TODO" DetailColor="b" />
-        <part Name="Titles" Primary="the Melancholic" />
+        <part Name="Titles" Primary="the {{b|Melancholic}}" />
         <part Name="Description" Short="TODO" />
     </object>
 
     <object Name="HDBrownie_NVM_Passion Raven" Inherits="HDBrownie_NVM_Raven NPC">
         <part Name="Render" DisplayName="TODO" DetailColor="M" />
-        <part Name="Titles" Primary="the Passionate" />
+        <part Name="Titles" Primary="the {{M|Passionate}}" />
         <part Name="Description" Short="TODO" />
     </object>
 
     <object Name="HDBrownie_NVM_Morbidity Raven" Inherits="HDBrownie_NVM_Raven NPC">
         <part Name="Render" DisplayName="TODO" DetailColor="R" />
-        <part Name="Titles" Primary="the Morbid" />
+        <part Name="Titles" Primary="the {{R|Morbid}}" />
         <part Name="Description" Short="TODO" />
     </object>
 </objects>
