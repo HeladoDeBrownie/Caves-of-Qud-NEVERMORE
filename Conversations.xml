@@ -1,0 +1,65 @@
+<conversations>
+    <conversation ID="HDBrownie_NVM_Base">
+        <node ID="Start">
+            <choice ID="Lenore" GotoID="Lenore">Why are you called Lenore?</choice>
+            <choice ID="End" GotoID="End">Live and drink, non-nonsense bird.</choice>
+        </node>
+        <node ID="Lenore">
+            <text>
+                {{w|*The bird stares past you, as if not even hearing the question.*}}
+            </text>
+            <choice UseID="End" />
+        </node>
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Melancholy" Inherits="HDBrownie_NVM_Base">
+        <node ID="Start">
+            <text>
+                Traveler, I shall not hear ye; circumstances make me weary,
+                So begone unless you have a treatment for my heart so sore.
+                Once my heart was light and floating, like a firefly emoting,
+                dancing with the motes that lit the outside of my study door.
+                Once I danced among the motes all floating past my study door;
+                Now my spirit will not soar.
+            </text>
+            <text Priority="1">
+                What is that you come here bearing? You who zip about wayfaring,
+                Have you brought the means to heal my heart the way it was before?
+                Please O Stranger, I beseech you, may my low entreaty reach you,
+                Grant me that small mote of light you carry, this I ask you for!
+                I'll be grateful evermore.
+                <part Name="HaveItem" Blueprints="Symbiotic Firefly,Luminous Mote" AllowTemporary="true" />
+            </text>
+        </node>
+        <node ID="Start">
+        </node>
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Passion" Inherits="HDBrownie_NVM_Base">
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Morbidity" Inherits="HDBrownie_NVM_Base">
+        <node ID="Start">
+            <text>
+                {{w|*The corvid simply stares directly through you, trembling slightly, seeing not you but only possibilities beyond you.*}}
+            </text>
+            <choice GotoID="Hello">Hello?</choice>
+            <choice ID="End" GotoID="End">Live and drink, weird bird.</choice>
+        </node>
+        <node ID="Hello">
+            <text>{{w|*There is no reply. You're not sure if the bird is even aware of your presence.}}</text>
+            <choice GotoID="Poem">I was expecting a poem.</choice>
+            <choice UseID="End" />
+        </node>
+        <node ID="Poem">
+            <text>
+                {{w|*The silence shatters like brittle glass.*}} Then steal it bleeding from my chest.
+            </text>
+            <choice GotoID="What">I'm sorry? What?</choice>
+            <choice UseID="End" />
+        </node>
+        <node ID="What">
+            <text>
+                There is no poem so moving as the snuffing of a flame.
+            </text>
+            <choice GotoID="End">... Uh, okay. Live and drink.</choice>
+        </node>
+    </conversation>
+</conversations>

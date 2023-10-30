@@ -15,7 +15,7 @@
         <part Name="Corpse" CorpseBlueprint="HDBrownie_NVM_Unique Raven Corpse" />
         <tag Name="Gender" Value="nonspecific" />
         <tag Name="BaseObject" Value="*noinherit" />
-        <tag Name="ExcludeFromDynamicEncounters" />5
+        <tag Name="ExcludeFromDynamicEncounters" />
         <xtagGrammar Proper="true" />
 
         <stat Name="Hitpoints" Value="100" />
@@ -28,6 +28,7 @@
         <part Name="Render" DetailColor="b" />
         <part Name="Titles" Primary="the {{b|Melancholic}}" />
         <part Name="Description" Short="TODO" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Melancholy" />
 
         <stat Name="Level" Value="20" />
 
@@ -38,6 +39,7 @@
         <part Name="Render" DetailColor="M" />
         <part Name="Titles" Primary="the {{M|Passionate}}" />
         <part Name="Description" Short="TODO" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Passion" />
 
         <stat Name="Level" Value="25" />
 
@@ -48,6 +50,7 @@
         <part Name="Render" DetailColor="R" />
         <part Name="Titles" Primary="the {{R|Morbid}}" />
         <part Name="Description" Short="TODO" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Morbidity" />
 
         <stat Name="Level" Value="30" />
 
