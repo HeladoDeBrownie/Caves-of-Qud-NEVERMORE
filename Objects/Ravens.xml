@@ -1,36 +1,56 @@
 <objects>
-    <!-- Ravens -->
-
-    <object Name="HDBrownie_NVM_Base Raven" Inherits="BaseBird">
-        <part Name="Render" Tile="HDBrownie NVM Raven.png" ColorString="&amp;K" DetailColor="w" />
+    <object Name="HDBrownie_NVM_Raven" Inherits="BaseBird">
+        <part Name="Render" DisplayName="squall raven" Tile="HDBrownie NVM Raven.png" ColorString="&amp;K" DetailColor="w" />
+        <part Name="Brain" Factions="Strangers-100,Birds-100" />
         <part Name="Corpse" CorpseChance="100" CorpseBlueprint="HDBrownie_NVM_Raven Corpse" />
-        <tag Name="BaseObject" Value="*noinherit" />
-        <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="Species" Value="raven" />
+
+        <stat Name="Level" Value="12" />
+
+        <mutation Name="StunningForce" Level="5" />
     </object>
 
-    <object Name="HDBrownie_NVM_Raven NPC" Inherits="HDBrownie_NVM_Base Raven">
-        <part Name="Render" Tile="HDBrownie NVM Raven NPC.png" />
-        <part Name="Corpse" CorpseChance="100" CorpseBlueprint="HDBrownie_NVM_Unique Raven Corpse" />
-        <xtagGrammar Proper="true" />
+    <object Name="HDBrownie_NVM_Raven NPC" Inherits="HDBrownie_NVM_Raven">
+        <part Name="Render" DisplayName="Lenore" Tile="HDBrownie NVM Raven NPC.png" />
+        <part Name="Corpse" CorpseBlueprint="HDBrownie_NVM_Unique Raven Corpse" />
         <tag Name="Gender" Value="nonspecific" />
-        <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="BaseObject" Value="*noinherit" />
+        <tag Name="ExcludeFromDynamicEncounters" />5
+        <xtagGrammar Proper="true" />
+
+        <stat Name="Hitpoints" Value="100" />
+        <stat Name="Speed" Value="110" />
+
+        <mutation Name="StunningForce" Level="10" />
     </object>
 
     <object Name="HDBrownie_NVM_Melancholy Raven" Inherits="HDBrownie_NVM_Raven NPC">
-        <part Name="Render" DisplayName="TODO" DetailColor="b" />
+        <part Name="Render" DetailColor="b" />
         <part Name="Titles" Primary="the {{b|Melancholic}}" />
         <part Name="Description" Short="TODO" />
+
+        <stat Name="Level" Value="20" />
+
+        <mutation Name="TimeDilation" Level="10" />
     </object>
 
     <object Name="HDBrownie_NVM_Passion Raven" Inherits="HDBrownie_NVM_Raven NPC">
-        <part Name="Render" DisplayName="TODO" DetailColor="M" />
+        <part Name="Render" DetailColor="M" />
         <part Name="Titles" Primary="the {{M|Passionate}}" />
         <part Name="Description" Short="TODO" />
+
+        <stat Name="Level" Value="25" />
+
+        <mutation Name="Pyrokinesis" Level="15" />
     </object>
 
     <object Name="HDBrownie_NVM_Morbidity Raven" Inherits="HDBrownie_NVM_Raven NPC">
-        <part Name="Render" DisplayName="TODO" DetailColor="R" />
+        <part Name="Render" DetailColor="R" />
         <part Name="Titles" Primary="the {{R|Morbid}}" />
         <part Name="Description" Short="TODO" />
+
+        <stat Name="Level" Value="30" />
+
+        <mutation Name="LifeDrain" Level="20" />
     </object>
 </objects>
