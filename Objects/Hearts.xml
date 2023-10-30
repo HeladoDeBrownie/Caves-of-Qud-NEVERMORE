@@ -1,6 +1,7 @@
 <objects>
     <object Name="HDBrownie_NVM_Base Heart" Inherits="Corpse">
         <part Name="Render" Tile="HDBrownie NVM Heart.png" ColorString="&amp;r" />
+        <part Name="Description" Short="You know its sound too well." />
         <removepart Name="RandomTile" />
         <tag Name="BaseObject" Value="*noinherit" />
         <tag Name="ExcludeFromDynamicEncounters" />
@@ -8,17 +9,14 @@
 
     <object Name="HDBrownie_NVM_Melancholy Heart" Inherits="HDBrownie_NVM_Base Heart">
         <part Name="Render" DisplayName="{{b|melancholic}} {{r|heart}}" DetailColor="b" />
-        <part Name="Description" Short="TODO" />
     </object>
 
     <object Name="HDBrownie_NVM_Passion Heart" Inherits="HDBrownie_NVM_Base Heart">
         <part Name="Render" DisplayName="{{M|passionate}} {{r|heart}}" DetailColor="M" />
-        <part Name="Description" Short="TODO" />
     </object>
 
     <object Name="HDBrownie_NVM_Morbidity Heart" Inherits="HDBrownie_NVM_Base Heart">
         <part Name="Render" DisplayName="{{R|morbid}} {{r|heart}}" DetailColor="R" />
-        <part Name="Description" Short="TODO" />
     </object>
 
     <object Name="HDBrownie_NVM_Heart Sleeve" Inherits="BarathrumiteSafetyBand">
