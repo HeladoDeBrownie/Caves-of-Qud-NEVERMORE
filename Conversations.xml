@@ -72,15 +72,17 @@
                 I've brought what you requested.
                 <part Name="HaveItem" Blueprints="Compound Bow,Turbow" AllowTemporary="true" />
             </choice>
-            <choice GotoID="WrongBow" IfHaveBlueprint="Short Bow,Electrobow" AllowTemporary="true">Is this the bow you wanted?</choice>
+            <choice GotoID="BigReward" GiveItem="HDBrownie_NVM_Heart Sleeve">
+                Here. Three different hearts.
+                <part Name="HaveItem" Blueprints="HDBrownie_NVM_Melancholy Heart" />
+                <part Name="HaveItem" Blueprints="HDBrownie_NVM_Passion Heart" />
+                <part Name="HaveItem" Blueprints="HDBrownie_NVM_Morbidity Heart" />
+            </choice>
             <choice ID="End" GotoID="End">Live and drink, advanced nonsense bird.</choice>
         </node>
         <node ID="Reward" SetBooleanState="HDBrownie_NVM_PassionSated,true" />
-        <node ID="WrongBow">
-            <text>
-                {{w|*The bird simply gestures disappointedly.*}}
-            </text>
-            <choice UseID="End" />
+        <node ID="BigReward">
+            <part Name="TakeItem" Blueprints="HDBrownie_NVM_Melancholy Heart,HDBrownie_NVM_Passion Heart,HDBrownie_NVM_Morbidity Heart" Amount="*" />
         </node>
     </conversation>
     <conversation ID="HDBrownie_NVM_Morbidity" Inherits="HDBrownie_NVM_Raven NPC Base">
