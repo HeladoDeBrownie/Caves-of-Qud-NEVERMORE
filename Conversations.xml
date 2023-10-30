@@ -10,18 +10,7 @@
             <choice GotoID="End">Live and drink, nonsense bird.</choice>
         </node>
     </conversation>
-    <conversation ID="HDBrownie_NVM_Raven NPC Base">
-        <node ID="Start">
-            <choice ID="Lenore" GotoID="Lenore">Why are you called Lenore?</choice>
-        </node>
-        <node ID="Lenore">
-            <text>
-                {{w|*The bird stares past you, as if not even hearing the question.*}}
-            </text>
-            <choice UseID="End" />
-        </node>
-    </conversation>
-    <conversation ID="HDBrownie_NVM_Melancholy" Inherits="HDBrownie_NVM_Raven NPC Base">
+    <conversation ID="HDBrownie_NVM_Melancholy">
         <node ID="Start">
             <text>
                 Traveler, I shall not hear ye; circumstances make me weary,
@@ -50,7 +39,7 @@
         </node>
         <node ID="Reward" SetBooleanState="HDBrownie_NVM_MelancholySated,true" />
     </conversation>
-    <conversation ID="HDBrownie_NVM_Passion" Inherits="HDBrownie_NVM_Raven NPC Base">
+    <conversation ID="HDBrownie_NVM_Passion">
         <node ID="Start">
             <text>
                 Though you may not divine the rhyming scheme,
@@ -85,7 +74,7 @@
             <part Name="TakeItem" Blueprints="HDBrownie_NVM_Melancholy Heart,HDBrownie_NVM_Passion Heart,HDBrownie_NVM_Morbidity Heart" Amount="*" />
         </node>
     </conversation>
-    <conversation ID="HDBrownie_NVM_Morbidity" Inherits="HDBrownie_NVM_Raven NPC Base">
+    <conversation ID="HDBrownie_NVM_Morbidity">
         <node ID="Start">
             <text>
                 {{w|*The corvid simply stares directly through you, trembling slightly, seeing not you but only possibilities beyond you.*}}
