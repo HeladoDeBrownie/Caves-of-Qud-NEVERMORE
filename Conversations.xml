@@ -2,7 +2,6 @@
     <conversation ID="HDBrownie_NVM_Base">
         <node ID="Start">
             <choice ID="Lenore" GotoID="Lenore">Why are you called Lenore?</choice>
-            <choice ID="End" GotoID="End">Live and drink, non-nonsense bird.</choice>
         </node>
         <node ID="Lenore">
             <text>
@@ -29,11 +28,33 @@
                 I'll be grateful evermore.
                 <part Name="HaveItem" Blueprints="Symbiotic Firefly,Luminous Mote" AllowTemporary="true" />
             </text>
-        </node>
-        <node ID="Start">
+            <choice ID="End" GotoID="End">Live and drink, non-nonsense bird.</choice>
         </node>
     </conversation>
     <conversation ID="HDBrownie_NVM_Passion" Inherits="HDBrownie_NVM_Base">
+        <node ID="Start">
+            <text>
+                Though you may not divine the rhyming scheme,
+                There lies in hiding much more than you see here.
+                Were you to simply peer past what may seem,
+                'Fore long the treasure would approach and be near.
+                O you errant upon the winding path,
+                There holds but one last bastion in my spirit;
+                I do beseech you, if as Cupid hath,
+                You come across a mighty bow, please hear it:
+                Do be so cordial as to let it free,
+                Entrust it to my wings, so strong and agile.
+                Do go, posthaste, and bring that bow to me.
+            </text>
+            <choice GotoID="WrongBow" IfHaveBlueprint="Short Bow,Electrobow" AllowTemporary="true">Is this the bow you wanted?</choice>
+            <choice ID="End" GotoID="End">Live and drink, advanced nonsense bird.</choice>
+        </node>
+        <node ID="WrongBow">
+            <text>
+                {{w|*The bird simply gestures disappointedly.*}}
+            </text>
+            <choice UseID="End" />
+        </node>
     </conversation>
     <conversation ID="HDBrownie_NVM_Morbidity" Inherits="HDBrownie_NVM_Base">
         <node ID="Start">
@@ -41,7 +62,7 @@
                 {{w|*The corvid simply stares directly through you, trembling slightly, seeing not you but only possibilities beyond you.*}}
             </text>
             <choice GotoID="Hello">Hello?</choice>
-            <choice ID="End" GotoID="End">Live and drink, weird bird.</choice>
+            <choice ID="End" GotoID="End">Live and drink, unsettling bird.</choice>
         </node>
         <node ID="Hello">
             <text>{{w|*There is no reply. You're not sure if the bird is even aware of your presence.}}</text>
