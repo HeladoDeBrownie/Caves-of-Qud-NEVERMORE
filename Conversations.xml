@@ -39,8 +39,16 @@
                 I'll be grateful evermore.
                 <part Name="HaveItem" Blueprints="Symbiotic Firefly,Luminous Mote" AllowTemporary="true" />
             </text>
+            <text Priority="2" IfHaveState="HDBrownie_NVM_MelancholySated">
+                {{w|*The bird is silent, sated.*}}
+            </text>
+            <choice GotoID="Reward" TakeItem="Symbiotic Firefly,Luminous Mote" GiveItem="HDBrownie_NVM_Melancholy Heart" IfNotHaveState="HDBrownie_NVM_MelancholySated">
+                I've brought what you requested.
+                <part Name="HaveItem" Blueprints="Symbiotic Firefly,Luminous Mote" AllowTemporary="true" />
+            </choice>
             <choice ID="End" GotoID="End">Live and drink, non-nonsense bird.</choice>
         </node>
+        <node ID="Reward" SetBooleanState="HDBrownie_NVM_MelancholySated,true" />
     </conversation>
     <conversation ID="HDBrownie_NVM_Passion" Inherits="HDBrownie_NVM_Raven NPC Base">
         <node ID="Start">
@@ -57,9 +65,17 @@
                 Entrust it to my wings, so strong and agile.
                 Do go, posthaste, and bring that bow to me.
             </text>
+            <text Priority="2" IfHaveState="HDBrownie_NVM_PassionSated">
+                {{w|*The bird is silent, sated.*}}
+            </text>
+            <choice GotoID="Reward" TakeItem="Compound Bow,Turbow" GiveItem="HDBrownie_NVM_Passion Heart" IfNotHaveState="HDBrownie_NVM_PassionSated">
+                I've brought what you requested.
+                <part Name="HaveItem" Blueprints="Compound Bow,Turbow" AllowTemporary="true" />
+            </choice>
             <choice GotoID="WrongBow" IfHaveBlueprint="Short Bow,Electrobow" AllowTemporary="true">Is this the bow you wanted?</choice>
             <choice ID="End" GotoID="End">Live and drink, advanced nonsense bird.</choice>
         </node>
+        <node ID="Reward" SetBooleanState="HDBrownie_NVM_PassionSated,true" />
         <node ID="WrongBow">
             <text>
                 {{w|*The bird simply gestures disappointedly.*}}
