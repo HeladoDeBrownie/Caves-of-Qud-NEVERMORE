@@ -24,7 +24,7 @@
         <part Name="Description" Short="To wear one's heart on one's sleeve is to be both vulnerable and open to connection." />
         <part Name="Physics" Weight="-10" />
         <part Name="Armor" AV="-1" />
-        <part Name="RecoilOnDeath" IsRealityDistortionBased="true" IsTechScannable="false" />
+        <part Name="RecoilOnDeath" DestinationZone="JoppaWorld.53.3.1.1.9" DestinationX="39" DestinationY="12" IsRealityDistortionBased="true" IsTechScannable="false" />
         <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
         <removepart Name="Cursed" />
         <removepart Name="EnergyCellSocket" />
