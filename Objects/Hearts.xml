@@ -20,4 +20,15 @@
         <part Name="Render" DisplayName="{{R|morbid}} {{r|heart}}" DetailColor="R" />
         <part Name="Description" Short="TODO" />
     </object>
+
+    <object Name="HDBrownie_NVM_Heart Sleeve" Inherits="BarathrumiteSafetyBand">
+        <part Name="Render" DisplayName="{{b-M-R-M sequence|heart sleeve}}" Tile="HDBrownie NVM Heart Sleeve.png" ColorString="&amp;c" DetailColor="M" />
+        <part Name="Description" Short="To wear one's heart on one's sleeve is to be both vulnerable and open to connection." />
+        <part Name="Physics" Weight="-10" />
+        <part Name="Armor" AV="-1" />
+        <part Name="RecoilOnDeath" IsRealityDistortionBased="true" IsTechScannable="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <removepart Name="Cursed" />
+        <removepart Name="EnergyCellSocket" />
+    </object>
 </objects>
