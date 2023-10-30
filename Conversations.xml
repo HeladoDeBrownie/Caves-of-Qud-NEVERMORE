@@ -1,5 +1,16 @@
 <conversations>
-    <conversation ID="HDBrownie_NVM_Base">
+    <conversation ID="HDBrownie_NVM_Raven">
+        <node ID="Start">
+            <text>
+                {{emote|*CAAW*}} =MARKOVCORVIDSENTENCE= {{emote|*CAAW*}}
+            </text>
+            <text Priority="1" IfIn100="2">
+                {{emote|*CAAW*}} Restless in the spindle channel, phantom corvids three. {{emote|*CAAW*}}
+            </text>
+            <choice GotoID="End">Live and drink, nonsense bird.</choice>
+        </node>
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Raven NPC Base">
         <node ID="Start">
             <choice ID="Lenore" GotoID="Lenore">Why are you called Lenore?</choice>
         </node>
@@ -10,7 +21,7 @@
             <choice UseID="End" />
         </node>
     </conversation>
-    <conversation ID="HDBrownie_NVM_Melancholy" Inherits="HDBrownie_NVM_Base">
+    <conversation ID="HDBrownie_NVM_Melancholy" Inherits="HDBrownie_NVM_Raven NPC Base">
         <node ID="Start">
             <text>
                 Traveler, I shall not hear ye; circumstances make me weary,
@@ -31,7 +42,7 @@
             <choice ID="End" GotoID="End">Live and drink, non-nonsense bird.</choice>
         </node>
     </conversation>
-    <conversation ID="HDBrownie_NVM_Passion" Inherits="HDBrownie_NVM_Base">
+    <conversation ID="HDBrownie_NVM_Passion" Inherits="HDBrownie_NVM_Raven NPC Base">
         <node ID="Start">
             <text>
                 Though you may not divine the rhyming scheme,
@@ -56,7 +67,7 @@
             <choice UseID="End" />
         </node>
     </conversation>
-    <conversation ID="HDBrownie_NVM_Morbidity" Inherits="HDBrownie_NVM_Base">
+    <conversation ID="HDBrownie_NVM_Morbidity" Inherits="HDBrownie_NVM_Raven NPC Base">
         <node ID="Start">
             <text>
                 {{w|*The corvid simply stares directly through you, trembling slightly, seeing not you but only possibilities beyond you.*}}

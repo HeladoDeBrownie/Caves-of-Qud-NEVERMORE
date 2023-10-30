@@ -4,6 +4,7 @@
         <part Name="Brain" Factions="Strangers-100,Birds-100" />
         <part Name="Corpse" CorpseChance="100" CorpseBlueprint="HDBrownie_NVM_Raven Corpse" />
         <tag Name="Species" Value="raven" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Raven" />
 
         <stat Name="Level" Value="12" />
 
